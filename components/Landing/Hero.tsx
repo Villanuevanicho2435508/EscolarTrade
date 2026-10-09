@@ -82,6 +82,25 @@ function ItemCard(){
 	);
 }
 
+const PHRASES = [
+	{
+		icon: MailCheck,
+		text: "Verified @ceu.edu.ph email"
+	},
+	{
+		icon: PhilippinePeso,
+		text: "Zero transaction fees"
+	},
+	{
+		icon: Store,
+		text: "Designated campus exchange"
+	},
+	{
+		icon: University,
+		text: "CEU Malolos community"
+	}
+]
+
 function Banner(){
 	return(
 		<div className="banner w-[60%] flex flex-col justify-center px-8">
@@ -107,30 +126,19 @@ function Banner(){
 			<Separator className="mb-4" />
 
 			<div className="flex flex-wrap gap-x-6 phrase">
-				<div className='flex text-xs gap-1 items-center'>
-					<MailCheck size={18} />
-					<p className='font-medium text-muted-foreground'>
-						Verified @ceu.edu.ph email
-					</p>
-				</div>
-				<div className='flex text-xs gap-1 items-center'>
-					<PhilippinePeso size={18} />
-					<p className='font-medium text-muted-foreground'>
-						Zero transaction fees
-					</p>
-				</div>
-				<div className='flex text-xs gap-1 items-center'>
-					<Store size={18} />
-					<p className='font-medium text-muted-foreground'>
-						Designated campus exchange
-					</p>
-				</div>
-				<div className='flex text-xs gap-1 items-center'>
-					<University size={18} />
-					<p className='font-medium text-muted-foreground'>
-						CEU Malolos community	
-					</p>
-				</div>
+				{
+					PHRASES.map((item, index) => {
+						const Icon = item.icon;
+						return(
+							<div key={index} className='flex text-xs gap-1 items-center'>
+								<Icon size={18} />
+								<p className='font-medium text-muted-foreground'>
+									{item.text}
+								</p>
+							</div>
+						);
+					})
+				}
 			</div>
 		</div>
 	);
