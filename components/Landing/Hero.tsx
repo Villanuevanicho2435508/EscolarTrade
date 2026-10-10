@@ -24,7 +24,7 @@ import { Separator } from "../ui/separator";
 
 export function Hero(){
 	return(
-		<section id="hero" className="pt-14 w-full gap-4 flex hero h-screen">
+		<section id="hero" className="border pt-14 w-full gap-4 flex hero h-screen">
 			<Banner />
 			<ItemCard />
 		</section>
@@ -67,7 +67,7 @@ function ItemCard(){
 								3M Litmann Classic III + Lab Gown
 							</p>
 							<p className="ml-auto text-lg font-bold">
-								P4,200
+								₱4,200
 							</p>
 						</span>
 						<p className="text-xs">

@@ -4,10 +4,7 @@ import {
 	Card,
 	CardAction,
 	CardContent,
-	CardDescription,
-	CardFooter,
 	CardHeader,
-	CardTitle
 } from "@/components/ui/card";
 
 import { 
@@ -29,7 +26,7 @@ const CORE_CATEGORIES = [
 	},
 	{
 		icon: PenLine,
-		category: "Supplies & Stationary",
+		category: "Supplies & Stationery",
 		tags: ["Drafting kits", "lab notebooks", "pens"]
 	},
 	{
@@ -61,8 +58,8 @@ const CORE_CATEGORIES = [
 
 export function MarketCategories(){
 	return(
-		<section id="categories" className="p-8 w-full flex flex-col hero">
-			<p className="text-sm uppercase text-muted-foreground">
+		<section id="categories" className="p-8 w-full flex flex-col">
+			<p className="text-xs font-semibold uppercase text-muted-foreground">
 				campus directory
 			</p>
 			<h2 className="font-semibold text-2xl">
