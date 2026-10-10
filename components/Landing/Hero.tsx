@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { 
 	Card,
 	CardAction,
@@ -31,53 +32,57 @@ export function Hero(){
 }
 
 function ItemCard(){
+	// TODO: Link to actual listing
+	
 	return(
 		<div className="flex items-center justify-center h-full item-card w-[40%]">
-			<Card className='max-w-md'>
-				<CardHeader>
-					<div className='flex gap-2'>
-						<Avatar>
-							<AvatarImage src="" />
-							<AvatarFallback>CN</AvatarFallback>
-						</Avatar>
-						<span>
-							<CardTitle>Villanueva, Nicho</CardTitle>
-							<CardDescription className='text-xs'>BSIT - 3rd Year</CardDescription>
+			<Link href="">
+				<Card className='max-w-md'>
+					<CardHeader>
+						<div className='flex gap-2'>
+							<Avatar>
+								<AvatarImage src="" />
+								<AvatarFallback>CN</AvatarFallback>
+							</Avatar>
+							<span>
+								<CardTitle>Villanueva, Nicho</CardTitle>
+								<CardDescription className='text-xs'>BSIT - 3rd Year</CardDescription>
+							</span>
+						</div>
+						<CardAction>
+							<Badge>Active Listing</Badge>
+						</CardAction>
+					</CardHeader>
+					<Separator />
+					<CardContent>
+						<img 
+							className='rounded-md object-cover w-full h-[300px]'
+							src='https://lh3.googleusercontent.com/aida-public/AB6AXuDo_sF4xBq10AxbjZovJ99cxhfEgiiUds7-tKAvHcSiRIu4DI0naxhiOn0qc66uzSgaW9JjmGi3bt3etqtMdJU30B3inZ5J4wi0N-mvRUyh-ZFevaeN-QdG56-BH_AndGgst2tKlCwbDNx7gBaV_LwvEQ0Rhi33iETI5EtIhoEyyBEW5o8kMf5b8dsGGSnTOax9rLDoOJWOdiXcUhBRp7TjaSfpofcz-f8BXMVnxFFoc-W5VrVquaWD' 
+							alt="Lab Item"
+						/>
+					</CardContent>
+					<CardFooter className='flex-col'>
+						<span className='flex w-full items-center'>
+							<p className="text-md font-semibold">
+								3M Litmann Classic III + Lab Gown
+							</p>
+							<p className="ml-auto text-lg font-bold">
+								P4,200
+							</p>
 						</span>
-					</div>
-					<CardAction>
-						<Badge>Active Listing</Badge>
-					</CardAction>
-				</CardHeader>
-				<Separator />
-				<CardContent>
-					<img 
-						className='rounded-md object-cover w-full h-[300px]'
-						src='https://lh3.googleusercontent.com/aida-public/AB6AXuDo_sF4xBq10AxbjZovJ99cxhfEgiiUds7-tKAvHcSiRIu4DI0naxhiOn0qc66uzSgaW9JjmGi3bt3etqtMdJU30B3inZ5J4wi0N-mvRUyh-ZFevaeN-QdG56-BH_AndGgst2tKlCwbDNx7gBaV_LwvEQ0Rhi33iETI5EtIhoEyyBEW5o8kMf5b8dsGGSnTOax9rLDoOJWOdiXcUhBRp7TjaSfpofcz-f8BXMVnxFFoc-W5VrVquaWD' 
-						alt="Lab Item"
-					/>
-				</CardContent>
-				<CardFooter className='flex-col'>
-					<span className='flex w-full items-center'>
-						<p className="text-md font-semibold">
-							3M Litmann Classic III + Lab Gown
+						<p className="text-xs">
+							Used for 1 clinical rotation only. Complete with original spare earpieces and box.
 						</p>
-						<p className="ml-auto text-lg font-bold">
-							P4,200
-						</p>
-					</span>
-					<p className="text-xs">
-						Used for 1 clinical rotation only. Complete with original spare earpieces and box.
-					</p>
-					<Card className='mt-4 px-4 py-2 w-full'>
-						<p className="text-xs flex gap-2 items-center">
-							<MapPin />
-							Centrodome Lobby
-							<span className='text-muted-foreground ml-auto'>Cash</span>
-						</p>
-					</Card>
-				</CardFooter>
-			</Card>
+						<Card className='mt-4 px-4 py-2 w-full'>
+							<p className="text-xs flex gap-2 items-center">
+								<MapPin />
+								Centrodome Lobby
+								<span className='text-muted-foreground ml-auto'>Cash</span>
+							</p>
+						</Card>
+					</CardFooter>
+				</Card>
+			</Link>
 		</div>
 	);
 }
