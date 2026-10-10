@@ -5,15 +5,15 @@ import { GraduationCap } from "lucide-react";
 const LandingLinks = [
 	{
 		name: "Categories",
-		link: "/categories"
+		link: "#categories"
 	},
 	{
 		name: "How It Works",
-		link: "tutorial",
+		link: "#protocols",
 	},
 	{
 		name: "Trust & Safety",
-		link: "tos",
+		link: "#cta",
 	},
 	{
 		name: "About",

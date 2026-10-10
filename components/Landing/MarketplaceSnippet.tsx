@@ -77,7 +77,7 @@ export const LISTINGS: Listing[] = [
 export function MarketplaceSnippet(){
 	// TODO: link to marketplace 
 	return(
-		<section id="protocols" className="border p-8 w-full flex flex-col">
+		<section id="market" className="border p-8 w-full flex flex-col">
 			<p className="text-xs font-semibold uppercase text-muted-foreground">
 				live marketplace	
 			</p>
