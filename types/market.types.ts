@@ -1,9 +1,18 @@
-export type Category = "Textbooks & Reviewers" | "Supplies & Stationery" | "Scientific Calculators" | "Gadgets & Tech" | "Uniforms" | "Project Materials" | "Foods";
+export type Category = 
+"Textbooks & Reviewers" 	|
+"Supplies & Stationery" 	|
+"Scientific Calculators" 	|
+"Gadgets & Tech" 					|
+"Uniforms" 								|
+"Project Materials" 			|
+"Foods";
+
 export type Condition =
 	| "Brand New"
 	| "Used - Like New"
 	| "Used - Excellent"
 	| "Used - Good";
+
 export type Listing = {
 	id: string;
 	title: string;

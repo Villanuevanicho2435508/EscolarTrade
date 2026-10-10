@@ -42,7 +42,7 @@ const FEATS = [
 
 export function CTA(){
 	return(
-		<section id="cta" className="border p-8 w-full flex flex-col">
+		<section id="cta" className="border-b p-8 w-full flex flex-col">
 			<Card className="bg-muted p-0">
 				<CardContent className="flex px-10 py-10 gap-8">
 					<div className="w-[70%] texts">
