@@ -1,43 +1,21 @@
 import Link from "next/link";
 
-// TODO: actual links
-const FOOTER_LINKS = [
-	{
-		title: "Categories",
-		links: [
-			{ label: "Textbooks & Reviewers", href: "/browse/textbooks" },
-			{ label: "Supplies & Stationery", href: "/browse/nursing-medical" },
-			{ label: "Scientific Calculators & Tech", href: "/browse/calculators" },
-			{ label: "Gadgets & Tech", href: "/browse/dentistry" },
-			{ label: "Uniforms", href: "/browse/uniforms" },
-			{ label: "Project Materials", href: "/browse/materials" },
-			{ label: "Foods", href: "/browse/foods" },
-		],
-	},
-	{
-		title: "Campus Trust",
-		links: [
-			{ label: "CEU Email Verification", href: "/trust/verification" },
-			{ label: "Designated Meetup Zones", href: "/trust/meetup-zones" },
-			{ label: "Honest Listing Policty", href: "/trust/honor-code" },
-		],
-	},
-	{
-		title: "Institutional",
-		links: [
-			{ label: "About EscolarTrade", href: "/about" },
-			{ label: "Privacy Policy", href: "/privacy" },
-			{ label: "Terms of Service", href: "/terms" },
-		],
-	},
-];
+export type FooterLinkPairType = {
+	label: string,
+	href: string
+};
 
-export function LandingFooter() {
+export type FooterLinkType = {
+	title: string,
+	links: FooterLinkPairType[]
+}
+
+export function LandingFooter({ links } : { links: FooterLinkType[] }) {
 	return (
 		<footer className="w-full bg-muted px-8 pt-8 pb-4">
 			<div className="mx-auto max-w-7xl">
-				<div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-					<div className="col-span-2 md:col-span-1">
+				<div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+					<div className="col-span-2 lg:col-span-1">
 						<p className="text-base font-semibold">EscolarTrade</p>
 						<p className="mt-3 max-w-xs text-xs leading-relaxed text-muted-foreground">
 							The hyper-local peer commerce marketplace engineered exclusively
@@ -45,7 +23,7 @@ export function LandingFooter() {
 						</p>
 					</div>
 
-					{FOOTER_LINKS.map((group) => {
+					{links.map((group) => {
 						const headingId = `footer-${group.title
 							.toLowerCase()
 							.replace(/\s+/g, "-")}`;
@@ -60,7 +38,7 @@ export function LandingFooter() {
 								</h2>
 								<ul className="mt-3">
 									{group.links.map((link) => (
-										<li key={link.href}>
+										<li key={`${link.label}-${link.href}`}>
 											<Link
 												href={link.href}
 												className="text-xs text-muted-foreground transition-colors hover:text-foreground hover:underline"
@@ -75,7 +53,7 @@ export function LandingFooter() {
 					})}
 				</div>
 
-				<div className="mt-10 flex flex-col gap-2 border-t pt-4 text-xs md:flex-row md:items-center md:justify-between">
+				<div className="mt-10 flex flex-col gap-2 border-t pt-4 text-xs lg:flex-row lg:items-center lg:justify-between">
 					<p className="font-medium">
 						Exclusive to verified CEU Malolos students, faculty, and staff.
 						Simulated payment &amp; campus pickup only.

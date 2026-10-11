@@ -1,15 +1,7 @@
-import { ArrowRight, MapPin, Heart } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Badge } from "../ui/badge";
-import { Button } from "../ui/button";
 import { Listing } from "@/types/market.types";
+import { ListingCard } from "../Marketplace/ListingCard";
 
 export const LISTINGS: Listing[] = [
 	{
@@ -90,7 +82,7 @@ export function MarketplaceSnippet(){
 					<ArrowRight size={16}/>
 				</Link>
 			</div>
-			<div className="listings flex flex-wrap gap-4 justify-center">
+			<div className="listings gap-4 justify-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
 				{
 					LISTINGS.map((item) => {
 						return(
@@ -100,54 +92,5 @@ export function MarketplaceSnippet(){
 				}
 			</div>
 		</section>
-	);
-}
-
-// TODO: Move to market folder or something
-export function ListingCard({ listing } : { listing: Listing }){
-	// TODO: link to listing page
-	
-	return(
-		<Link href="" >
-			<Card className="relative w-full max-w-sm pt-0">
-				<div className='relative'>
-					<Button
-						variant="secondary"
-						className="absolute top-2 right-2 z-21"
-					><Heart /></Button>
-					<Badge
-						variant="secondary"
-						className="absolute bottom-2 left-2 z-21"
-					>{listing.condition}</Badge>
-					<img
-						src={listing.image}
-						alt={listing.title}
-						className="relative z-20 aspect-video w-full object-cover"
-					/>
-				</div>
-				<CardHeader>
-					<div className="flex justify-between">
-						<p className="text-xs text-muted-foreground">{listing.category}</p>
-						<p className="font-semibold">₱{listing.price}</p>
-					</div>
-					<CardTitle>{listing.title}</CardTitle>
-					<CardDescription>
-						{listing.description}
-					</CardDescription>
-				</CardHeader>
-				<CardFooter>
-					<div className="text-xs flex justify-between seller-details w-full">
-						<div className="flex gap-1 seller items-center">
-							<p className="text-sm font-medium">{listing.seller.name}</p>
-							<p className="text-muted-foreground">• {listing.seller.program}</p>
-						</div>
-						<div className="items-center text-muted-foreground flex">
-							<MapPin size={16} />
-							{listing.location}
-						</div>
-					</div>
-				</CardFooter>
-			</Card>
-		</Link>
 	);
 }
