@@ -75,6 +75,7 @@ export default function AuthPage(){
 													id="login-email"
 													name="login-email"
 													type="email"
+													pattern="[^\s@]+@mls\.ceu\.edu\.ph"
 													placeholder="surnameXXXXXXX@mls.ceu.edu.ph"	
 												/>
 												<FieldError></FieldError>
@@ -89,7 +90,7 @@ export default function AuthPage(){
 													placeholder="••••••••"	
 												/>
 												<FieldError></FieldError>
-												<Link className="text-xs text-end" href="/forgot-password">
+												<Link className="text-xs text-end" href="/auth/forgot-password">
 													Forgot Password?
 												</Link>
 											</Field>
@@ -123,6 +124,7 @@ export default function AuthPage(){
 													id="email"
 													name="email"
 													type="email"
+													pattern="[^\s@]+@mls\.ceu\.edu\.ph"
 													placeholder="surnameXXXXXXX@mls.ceu.edu.ph"	
 												/>
 												<FieldError></FieldError>
