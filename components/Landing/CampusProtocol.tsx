@@ -42,7 +42,7 @@ export function CampusProtocol(){
 			<p className='mb-4 text-muted-foreground'>
 				Zero shipping costs, zero stranger danger. Peer-to-peer exchanges within CEU Malolos grounds.
 			</p>
-			<div className="steps flex gap-4">
+			<div className="steps flex flex-col lg:flex-row gap-4">
 				{
 					STEPS.map((item, index) => {
 						const Icon = item.icon;

@@ -42,21 +42,21 @@ const FEATS = [
 
 export function CTA(){
 	return(
-		<section id="cta" className="border-b p-8 w-full flex flex-col">
+		<section id="cta" className="border-b p-8 w-full">
 			<Card className="bg-muted p-0">
-				<CardContent className="flex px-10 py-10 gap-8">
-					<div className="w-[70%] texts">
+				<CardContent className="lg:flex-row flex-col flex p-4 lg:p-10 gap-8">
+					<div className="w-full lg:w-[70%] texts">
 						<Badge>
 							<Shield/>
 							Closed Academic Network
 						</Badge>
-						<h2 className="font-semibold text-2xl">
+						<h2 className="font-semibold text-xl lg:text-2xl">
 							Built Exclusively for CEU Malolos Students & Faculty
 						</h2>
-						<p className="text-muted-foreground mb-4">
+						<p className="text-sm lg:text-base text-muted-foreground mb-4">
 							No outsiders, no scams, no sketchy delivery riders. Every listing and chat is bound to an active student or employee ID with verified institutional records.
 						</p>
-						<div className="grid grid-cols-2 grid-rows-2 gap-4 feats w-full">
+						<div className="flex flex-col lg:grid grid-cols-2 grid-rows-2 gap-4 feats w-full">
 							{
 								FEATS.map(item => {
 									const Icon = item.icon;
@@ -75,7 +75,7 @@ export function CTA(){
 							}
 						</div>
 					</div>
-					<div className="flex items-center justify-center cta-card w-[30%]">
+					<div className="flex items-center justify-center cta-card lg:w-[30%]">
 						<Card className="w-full">
 							<CardHeader>
 								<p className="leading-none text-xs uppercase text-muted-foreground">get verified today</p>

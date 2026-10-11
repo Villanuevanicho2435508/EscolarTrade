@@ -9,8 +9,8 @@ import { LandingFooter } from "@/components/Landing/Footer"
 export default function LandingPage() {
 	return (
 		<>
+			<LandingNavbar />
 			<main>
-				<LandingNavbar />
 				<Hero />
 				<MarketCategories />
 				<CampusProtocol />

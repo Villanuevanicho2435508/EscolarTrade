@@ -90,7 +90,7 @@ export function MarketplaceSnippet(){
 					<ArrowRight size={16}/>
 				</Link>
 			</div>
-			<div className="listings flex gap-4">
+			<div className="listings flex flex-wrap gap-4 justify-center">
 				{
 					LISTINGS.map((item) => {
 						return(
@@ -103,6 +103,7 @@ export function MarketplaceSnippet(){
 	);
 }
 
+// TODO: Move to market folder or something
 export function ListingCard({ listing } : { listing: Listing }){
 	// TODO: link to listing page
 	

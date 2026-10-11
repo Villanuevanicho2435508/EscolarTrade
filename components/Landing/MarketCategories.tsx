@@ -65,11 +65,11 @@ export function MarketCategories(){
 			<h2 className="font-semibold text-2xl">
 				Everything you need for your semester
 			</h2>
-			<div className="mb-4 text-muted-foreground flex justify-between">
+			<div className="mb-4 text-muted-foreground flex flex-col lg:flex-row gap-2 justify-between">
 				<p>
 					Explore items listed by fellow Escolarians across colleges
 				</p>
-				<p>7 Core Academic Categories</p>
+				<p className="font-semibold text-xs">7 Core Academic Categories</p>
 			</div>
 			<div className="categories grid w-full gap-4 sm:grid-cols-2 lg:grid-cols-4">
 				{

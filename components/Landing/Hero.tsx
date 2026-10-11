@@ -24,18 +24,19 @@ import { Separator } from "../ui/separator";
 
 export function Hero(){
 	return(
-		<section id="hero" className="border pt-14 w-full gap-4 flex hero h-screen">
+		<section id="hero"
+			className="border pt-14 w-full gap-0 lg:gap-4 flex flex-col lg:flex-row hero h-fit min-h-screen">
 			<Banner />
-			<ItemCard />
+			<FeaturedListingCard />
 		</section>
 	);
 }
 
-function ItemCard(){
+function FeaturedListingCard(){
 	// TODO: Link to actual listing
 	
 	return(
-		<div className="flex items-center justify-center h-full item-card w-[40%]">
+		<div className="p-8 flex items-center justify-center h-full item-card lg:w-[40%]">
 			<Link href="">
 				<Card className='max-w-md'>
 					<CardHeader>
@@ -108,36 +109,36 @@ const PHRASES = [
 
 function Banner(){
 	return(
-		<div className="banner w-[60%] flex flex-col justify-center px-8">
-			<Card className='rounded-sm flex flex-row gap-1 px-2 py-1 w-fit items-center'>
+		<div className="banner pt-6 lg:pt-0 lg:w-[60%] flex flex-col justify-center px-8">
+			<Badge variant="outline" className='rounded-sm flex flex-row gap-1 px-2 py-1 w-fit items-center'>
 				<ShieldCheck size={16} />
 				<p className='text-xs font-medium'>
 					CEU Malolos Exclusive Marketplace
 				</p>
-			</Card>
+			</Badge>
 			<h1
-				className='text-4xl font-bold mb-2'
+				className='text-2xl lg:text-4xl font-bold mb-2'
 			>Buy and Sell within CEU Malolos.</h1>
-			<p className="text-muted-foreground mb-4">
+			<p className="text-sm text-muted-foreground mb-4">
 				The trusted student marketplace for Centro Escolar University Malolos. Save money on textbooks, trade gadgets, sell pre-loved uniforms, and meet safely on campus with verified peers.
 			</p>
-			<div className="gap-2 cta flex mb-4">
-				<Button>Get Started 
+			<div className="gap-2 cta flex flex-col mb-4 lg:flex-row">
+				<Button size="lg">Get Started 
 					<ArrowRight />
 				</Button>
-				<Button variant="outline">Browse Marketplace</Button>
+				<Button size="lg" variant="outline">Browse Marketplace</Button>
 			</div>
 
 			<Separator className="mb-4" />
 
-			<div className="flex flex-wrap gap-x-6 phrase">
+			<div className="grid grid-cols-2 grid-rows-2 lg:flex lg:flex-wrap gap-x-6 phrase">
 				{
 					PHRASES.map((item, index) => {
 						const Icon = item.icon;
 						return(
 							<div key={index} className='flex text-xs gap-1 items-center'>
 								<Icon size={18} />
-								<p className='font-medium text-muted-foreground'>
+								<p className='truncate font-medium text-muted-foreground'>
 									{item.text}
 								</p>
 							</div>
