@@ -4,8 +4,6 @@ import { useState } from "react"
 import {
   Bell,
   ChevronDown,
-  ChevronLeft,
-  ChevronRight,
   Heart,
   LayoutGrid,
   List,
@@ -24,6 +22,14 @@ import {
 } from "@/components/ui/input-group"
 import { NativeSelect, NativeSelectOption } from "@/components/ui/native-select"
 import { Field, FieldLabel } from "@/components/ui/field"
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination"
 import { ListingCard } from "./ListingCard"
 import { ListingItem } from "./ListingItem"
 import { ItemGroup } from "@/components/ui/item"
@@ -67,11 +73,11 @@ export function MarketplaceBrowser() {
   }
   return (
     <>
-      <header className="border-b">
-        <div className="border mx-auto flex max-w-7xl flex-wrap items-center gap-4 px-4 py-4 lg:flex-nowrap lg:px-8">
+      <header className="border-b w-full">
+        <div className="border flex w-full flex-wrap items-center gap-4 px-4 py-4 lg:flex-nowrap lg:px-8">
           <Logo />
-          <div className="order-last w-full lg:order-0 lg:flex-1">
-            <InputGroup>
+          <div className="flex justify-center order-last w-full lg:order-0 lg:flex-1">
+            <InputGroup className="max-w-xl">
               <InputGroupAddon>
                 <Search />
               </InputGroupAddon>
@@ -131,7 +137,7 @@ export function MarketplaceBrowser() {
                 {item}
               </button>
             ))}
-            <Button variant="ghost" className="my-2 ml-auto" disabled>
+            <Button variant="ghost" className="my-2 ml-auto">
               <Plus />
               Post a Listing
             </Button>
@@ -314,17 +320,25 @@ export function MarketplaceBrowser() {
             Showing {listings.length ? "1–" : ""}
             {listings.length} of {listings.length} sample listings
           </p>
-          <nav aria-label="Listing pages" className="flex items-center gap-2">
-            <Button variant="ghost" disabled>
-              <ChevronLeft />
-              Previous
-            </Button>
-            <Button aria-current="page">1</Button>
-            <Button variant="ghost" disabled>
-              Next
-              <ChevronRight />
-            </Button>
-          </nav>
+          <Pagination aria-label="Listing pages" className="mx-0 w-auto">
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious
+                  tabIndex={-1}
+                  className="pointer-events-none opacity-50"
+                />
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink isActive>1</PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationNext
+                  tabIndex={-1}
+                  className="pointer-events-none opacity-50"
+                />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
         </div>
       </section>
     </>

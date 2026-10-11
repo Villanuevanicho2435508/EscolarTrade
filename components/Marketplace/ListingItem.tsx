@@ -23,25 +23,25 @@ export function ListingItem({ listing }: { listing: Listing }) {
       role="listitem"
       className="items-start lg:items-center"
     >
-      <ItemMedia className="w-20 overflow-hidden rounded-lg lg:w-40">
+      <ItemMedia>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={listing.image}
           alt={listing.title}
           loading="lazy"
-          className="aspect-[4/3] w-full object-cover"
+          className="aspect-square w-20 rounded-sm object-cover"
         />
       </ItemMedia>
       <ItemContent className="min-w-0">
         <div className="flex flex-wrap items-center gap-2">
-          <Badge variant="secondary">{listing.condition}</Badge>
+          <Badge className="hidden lg:block" variant="secondary">{listing.condition}</Badge>
           <span className="text-xs text-muted-foreground">
             {listing.category}
           </span>
         </div>
-        <ItemTitle className="line-clamp-none">{listing.title}</ItemTitle>
+        <ItemTitle className="line-clamp-1">{listing.title}</ItemTitle>
         <ItemDescription>{listing.description}</ItemDescription>
-        <div className="mt-1 flex flex-col gap-1 text-xs lg:flex-row lg:flex-wrap lg:gap-4">
+        <div className="hidden lg:flex flex-col gap-1 text-xs lg:flex-row lg:flex-wrap lg:gap-4">
           <p>
             <span className="font-medium">{listing.seller.name}</span>
             <span className="text-muted-foreground">
