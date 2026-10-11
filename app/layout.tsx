@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono, Inter, Space_Grotesk } from "next/font/google"
+import { Metadata } from "next";
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -12,6 +13,11 @@ const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 })
+
+export const metadata: Metadata = {
+  title: 'EscolarTrade',
+  description: 'The trusted student marketplace for Centro Escolar University Malolos. Save money on textbooks, trade gadgets, sell pre-loved uniforms, and meet safely on campus with verified peers.',
+}
 
 export default function RootLayout({
   children,
