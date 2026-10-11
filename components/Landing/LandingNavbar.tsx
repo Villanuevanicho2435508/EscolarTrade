@@ -5,15 +5,15 @@ import { GraduationCap } from "lucide-react";
 const LandingLinks = [
 	{
 		name: "Categories",
-		link: "/categories"
+		link: "#categories"
 	},
 	{
 		name: "How It Works",
-		link: "tutorial",
+		link: "#protocols",
 	},
 	{
 		name: "Trust & Safety",
-		link: "tos",
+		link: "#cta",
 	},
 	{
 		name: "About",
@@ -23,45 +23,48 @@ const LandingLinks = [
 
 export function LandingNavbar(){
 	return(
-		<nav
-		className='
-		bg-background
-		fixed top-0 z-999
-		w-full
-		py-2 px-8 h-14 flex items-center justify-between
-		border
-		'
-		>
-			<Link 
-			className='flex gap-2 p-0 leading-4 h-full'
-			href="/">
-				<GraduationCap size={32} className='h-full aspect-square'/>
-				<span>
-					<p className='font-semibold text-sm'>
-						EscolarTrade
-					</p>
-					<p className='text-xs text-muted-foreground'>
-						CEU Malolos Campus	
-					</p>
-				</span>
-			</Link>
+		<header>
+			<nav
+				className='
+				bg-background
+				fixed top-0 z-999
+				w-full
+				px-4
+				py-2 lg:px-8 h-14 flex items-center justify-between
+				border
+				'
+			>
+				<Link 
+					className='flex gap-2 p-0 leading-4 h-full'
+					href="/">
+					<GraduationCap size={32} className='h-full aspect-square'/>
+					<span>
+						<p className='font-semibold text-sm'>
+							EscolarTrade
+						</p>
+						<p className='text-xs text-muted-foreground'>
+							CEU Malolos Campus	
+						</p>
+					</span>
+				</Link>
 
-			<div className="links gap-4 flex text-sm text-muted-foreground">
-				{
-					LandingLinks.map((item, index) => {
-						return(
-							<Link key={index} href={item.link}>
-								{item.name}	
-							</Link>
-						);
-					})
-				}
-			</div>
+				<div className="hidden links gap-4 lg:flex text-sm text-muted-foreground">
+					{
+						LandingLinks.map((item, index) => {
+							return(
+								<Link key={index} href={item.link}>
+									{item.name}	
+								</Link>
+							);
+						})
+					}
+				</div>
 
-			<div className="auth flex gap-2">
-				<Button variant="outline">Log In</Button>
-				<Button>Sign Up</Button>
-			</div>
-		</nav>
+				<div className="auth flex gap-2">
+					<Button variant="outline">Log In</Button>
+					<Button>Sign Up</Button>
+				</div>
+			</nav>
+		</header>
 	);
 }
