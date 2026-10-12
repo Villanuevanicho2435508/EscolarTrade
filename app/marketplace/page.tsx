@@ -4,7 +4,7 @@ import { ArrowRight, CirclePlus } from "lucide-react"
 import { LandingFooter, type FooterLinkType } from "@/components/Landing/Footer"
 import { MarketplaceBrowser } from "@/components/Marketplace/MarketplaceBrowser"
 import { ListingCard } from "@/components/Marketplace/ListingCard"
-import { RECOMMENDED_LISTINGS } from "@/components/Marketplace/sample-listings"
+import { MARKETPLACE_LISTINGS, RECOMMENDED_LISTINGS } from "@/components/Marketplace/sample-listings"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 
@@ -46,7 +46,7 @@ export default function MarketplacePage() {
   return (
     <>
       <main>
-        <MarketplaceBrowser />
+        <MarketplaceBrowser listings={MARKETPLACE_LISTINGS} />
         <section
           className="bg-muted/60 py-8"
           aria-labelledby="recommendations-heading"
