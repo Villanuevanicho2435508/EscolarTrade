@@ -59,7 +59,7 @@ export function ListingCard({ listing } : { listing: Listing }){
 						<div className="flex items-center min-w-0 flex-1 justify-end text-muted-foreground">
 							<MapPin size={16} className="shrink-0" />
 							<p className="truncate">
-								{listing.location}
+								{listing.location[0]}
 							</p>
 						</div>
 					</div>

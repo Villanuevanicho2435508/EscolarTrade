@@ -5,6 +5,13 @@ export const listingStatuses = [
 	"Out of Stock"
 ] as const;
 
+export const listingStatusColor: Record<ListingStatus, string> = {
+	"Available": "bg-green-500",
+	"Pending": "bg-yellow-500",
+	"Sold": "bg-red-500",
+	"Out of Stock": "bg-orange-500"
+};
+
 export type ListingStatus = (typeof listingStatuses)[number];
 
 export const categories = [
@@ -53,6 +60,6 @@ export type Listing = {
 		name: string;
 		program: string;
 	};
-	location: string;
+	location: Location[];
 };
 

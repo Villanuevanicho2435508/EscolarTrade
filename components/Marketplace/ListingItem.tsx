@@ -55,7 +55,7 @@ export function ListingItem({ listing }: { listing: Listing }) {
 						</p>
 						<p className="flex items-center gap-1 text-muted-foreground">
 							<MapPin className="size-3 shrink-0" />
-							{listing.location}
+							{listing.location[0]}
 						</p>
 					</div>
 				</ItemContent>

@@ -10,7 +10,7 @@ export type FooterLinkType = {
 	links: FooterLinkPairType[]
 }
 
-export function LandingFooter({ links } : { links: FooterLinkType[] }) {
+export function Footer({ links } : { links: FooterLinkType[] }) {
 	return (
 		<footer className="w-full bg-muted px-8 pt-8 pb-4">
 			<div className="mx-auto max-w-7xl">

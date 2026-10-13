@@ -20,7 +20,7 @@ const sample = (
   images: string[],
   name: string,
   program: string,
-  location: Location
+  location: Location[]
 ): Listing => ({
   id,
   title,
@@ -49,7 +49,7 @@ export const MARKETPLACE_LISTINGS: Listing[] = [
     [photo("photo-1564473185935-58113cba1e80")],
     "Angelo D.",
     "BS Pharmacy",
-    "Canteen"
+    ["Canteen", "Gate 1"]
   ),
 
   sample(
@@ -63,7 +63,7 @@ export const MARKETPLACE_LISTINGS: Listing[] = [
     [photo("photo-1544947950-fa07a98d237f")],
     "Sofia L.",
     "BS Nursing",
-    "Library"
+    ["Library", "PHL Lobby"]
   ),
 
   sample(
@@ -77,7 +77,7 @@ export const MARKETPLACE_LISTINGS: Listing[] = [
     [photo("photo-1434389677669-e08b4cac3105")],
     "Camille M.",
     "BS Tourism",
-    "Gate 1"
+    ["Gate 1", "Gate 3"]
   ),
 
   sample(
@@ -91,7 +91,7 @@ export const MARKETPLACE_LISTINGS: Listing[] = [
     [photo("photo-1455390582262-044cdead277a")],
     "John R.",
     "BS Architecture",
-    "PHL Lobby"
+    ["PHL Lobby", "CEU Square"]
   ),
 
   sample(
@@ -105,7 +105,7 @@ export const MARKETPLACE_LISTINGS: Listing[] = [
     [photo("photo-1587829741301-dc798b83add3")],
     "Kevin S.",
     "BS Info Tech",
-    "CEU Square"
+    ["CEU Square", "Library"]
   ),
 
   sample(
@@ -119,7 +119,7 @@ export const MARKETPLACE_LISTINGS: Listing[] = [
     [photo("photo-1584982751601-97dcc096659c")],
     "Marian C.",
     "BS Biology",
-    "Gate 3"
+    ["Gate 3", "Gate 4"]
   ),
 
   sample(
@@ -133,7 +133,7 @@ export const MARKETPLACE_LISTINGS: Listing[] = [
     [photo("photo-1499636136210-6f4ee915583e")],
     "Patricia E.",
     "BS Hospitality Mgt",
-    "Canteen"
+    ["Canteen"]
   ),
 
   sample(
@@ -147,7 +147,7 @@ export const MARKETPLACE_LISTINGS: Listing[] = [
     [photo("photo-1543002588-bfa74002ed7e")],
     "Miguel B.",
     "BS MedTech",
-    "Library"
+    ["Library", "CEU Square"]
   ),
 ]
 
@@ -163,7 +163,7 @@ export const RECOMMENDED_LISTINGS: Listing[] = [
     [photo("photo-1576091160399-112ba8d25d1d")],
     "Sofia L.",
     "BS Nursing",
-    "PHL Lobby"
+    ["PHL Lobby", "Library"]
   ),
 
   sample(
@@ -177,7 +177,7 @@ export const RECOMMENDED_LISTINGS: Listing[] = [
     [photo("photo-1579684385127-1ef15d508118")],
     "Andrea M.",
     "BS Nursing",
-    "Gate 4"
+    ["Gate 4", "Gate 3"]
   ),
 
   sample(
@@ -191,7 +191,7 @@ export const RECOMMENDED_LISTINGS: Listing[] = [
     [photo("photo-1631815588090-d4bfec5b1ccb")],
     "Bea R.",
     "BS Nursing",
-    "Canteen"
+    ["Canteen", "CEU Square"]
   ),
 
   sample(
@@ -205,6 +205,6 @@ export const RECOMMENDED_LISTINGS: Listing[] = [
     [photo("photo-1507842217343-583bb7270b66")],
     "Carla V.",
     "BS Nursing",
-    "Library"
+    ["Library", "PHL Lobby"]
   ),
 ]

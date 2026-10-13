@@ -4,7 +4,7 @@ import { MarketCategories } from "@/components/Landing/MarketCategories"
 import { CampusProtocol } from "@/components/Landing/CampusProtocol"
 import { MarketplaceSnippet } from "@/components/Landing/MarketplaceSnippet"
 import { CTA } from "@/components/Landing/CTA"
-import { LandingFooter, FooterLinkType } from "@/components/Landing/Footer"
+import { Footer, FooterLinkType } from "@/components/Landing/Footer"
 
 // TODO: actual links
 const FOOTER_LINKS: FooterLinkType[] = [
@@ -50,7 +50,7 @@ export default function LandingPage() {
 				<MarketplaceSnippet />
 				<CTA />
 			</main>
-			<LandingFooter links={FOOTER_LINKS} />
+			<Footer links={FOOTER_LINKS} />
 		</>
 	)
 }
