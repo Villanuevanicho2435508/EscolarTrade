@@ -20,7 +20,7 @@ import {
 import { ItemGroup } from "@/components/ui/item"
 import { ListingCard } from "./ListingCard"
 import { ListingItem } from "./ListingItem"
-import { CONDITIONS } from "./sample-listings"
+import { conditions, locations } from "@/types/market.types"
 import { Listing } from "@/types/market.types"
 
 type MarketplaceBrowserProps = {
@@ -31,10 +31,6 @@ export function MarketplaceBrowser({
   listings,
 }: MarketplaceBrowserProps) {
   const [layout, setLayout] = useState<"grid" | "list">("grid")
-
-  const locations = Array.from(
-    new Set(listings.map((item) => item.location))
-  )
 
   return (
     <section
@@ -91,7 +87,7 @@ export function MarketplaceBrowser({
               Any Condition
             </NativeSelectOption>
 
-            {CONDITIONS.map((item) => (
+            {conditions.map((item) => (
               <NativeSelectOption
                 key={item}
                 value={item}

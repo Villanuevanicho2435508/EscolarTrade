@@ -20,7 +20,7 @@ import {
   InputGroupInput,
 } from "@/components/ui/input-group"
 import { cn } from "@/lib/utils"
-import { CATEGORIES } from "@/components/Marketplace/sample-listings"
+import { categories } from "@/types/market.types"
 
 type MarketplaceHeaderProps = {
   user: {
@@ -147,7 +147,7 @@ export function MarketplaceHeader({
             All Listings
           </Link>
 
-          {CATEGORIES.map((item) => (
+          {categories.map((item) => (
             <Link
               key={item}
               href={createMarketplaceUrl({

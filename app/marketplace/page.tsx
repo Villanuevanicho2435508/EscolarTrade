@@ -4,7 +4,7 @@ import { ArrowRight, CirclePlus } from "lucide-react"
 import { LandingFooter, type FooterLinkType } from "@/components/Landing/Footer"
 import { MarketplaceBrowser } from "@/components/Marketplace/MarketplaceBrowser"
 import { ListingCard } from "@/components/Marketplace/ListingCard"
-import { MARKETPLACE_LISTINGS, RECOMMENDED_LISTINGS } from "@/components/Marketplace/sample-listings"
+import { MARKETPLACE_LISTINGS, RECOMMENDED_LISTINGS } from "@/data/sample-listings"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 

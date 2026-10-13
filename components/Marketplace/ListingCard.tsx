@@ -12,12 +12,15 @@ import {
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Listing } from "@/types/market.types"
+import slugify from "slugify";
 
 export function ListingCard({ listing } : { listing: Listing }){
 	// TODO: link to listing page
+	// TODO: actual slug from the db
+	const slug = slugify(listing.title, { lower: true, trim: true }) + "-" + listing.id;
 	
 	return(
-		<Link href="" >
+		<Link href={`/marketplace/${slug}`} >
 			<Card className="h-full relative w-full pt-0">
 				<div className='relative'>
 					<Button
@@ -29,7 +32,7 @@ export function ListingCard({ listing } : { listing: Listing }){
 						className="absolute bottom-2 left-2 z-21"
 					>{listing.condition}</Badge>
 					<img
-						src={listing.image}
+						src={listing.image[0]}
 						alt={listing.title}
 						className="relative z-20 aspect-video w-full object-cover"
 					/>
