@@ -1,6 +1,7 @@
 import { Breadcrumbs } from "@/components/Marketplace/Breadcrumbs";
 import { ListingImages } from "@/components/Marketplace/ListingDetails/ListingImages";
 import { ListingDetailCard } from "@/components/Marketplace/ListingDetails/ListingDetailCard";
+import { SimilarItemByCategory } from "@/components/Marketplace/ListingDetails/SimilarItemByCategory";
 
 interface Props{
 	params: Promise<{ slug: string }>
@@ -53,12 +54,13 @@ export default async function ListingDetailsPage({ params } : Props){
 	return(
 		<main className="p-8 pt-4">
 			<Breadcrumbs breadcrumbs={crumbs}/>
-			<section className="mt-4 product-details flex gap-4">
+			<section className="mb-8 mt-4 product-details lg:flex-row flex flex-col gap-4">
 				<ListingImages 
 					listing={listItem}
 				/>
 				<ListingDetailCard listing={listItem} />
 			</section>
+			<SimilarItemByCategory category={listItem.category}/>
 		</main>
 	);
 }

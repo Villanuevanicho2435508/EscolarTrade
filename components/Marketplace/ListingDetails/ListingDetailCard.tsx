@@ -26,7 +26,7 @@ import Link from "next/link";
 // TODO: actual creation time of item
 export function ListingDetailCard({ listing } : { listing: Listing }){
 	return(
-		<div className="max-w-[40%] w-full flex flex-col gap-4">
+		<div className="lg:max-w-[40%] w-full flex flex-col gap-4">
 			<Card>
 				<CardHeader>
 					<div className="font-medium flex justify-between">
@@ -35,9 +35,9 @@ export function ListingDetailCard({ listing } : { listing: Listing }){
 							<Flag className="text-muted-foreground"/>
 						</Button>
 					</div>
-					<CardTitle className="text-4xl font-extrabold">{listing.title}</CardTitle>
+					<CardTitle className="text-2xl lg:text-4xl font-extrabold">{listing.title}</CardTitle>
 					<div className="items-center flex justify-between">
-						<p className="font-semibold text-xl">₱{listing.price}</p>
+						<p className="font-semibold text-base lg:text-xl">₱{listing.price}</p>
 						<Badge variant="secondary">
 							<span className={`rounded-full aspect-square w-2 ${listingStatusColor[listing.status]}`}></span>
 							{listing.status}
@@ -46,9 +46,9 @@ export function ListingDetailCard({ listing } : { listing: Listing }){
 				</CardHeader>
 				<Separator />
 				<CardContent>
-					<p className="text-base mb-4">{listing.description}</p>
-					<p className="uppercase font-medium text-muted-foreground mb-2">Meetup Spots</p>
-					<div className="spots flex gap-2">
+					<p className="text-sm lg:text-base mb-4">{listing.description}</p>
+					<p className="uppercasefont-medium text-muted-foreground mb-2">Meetup Spots</p>
+					<div className="spots flex flex-wrap gap-2">
 						{
 							listing.location.map(item => {
 								return(
