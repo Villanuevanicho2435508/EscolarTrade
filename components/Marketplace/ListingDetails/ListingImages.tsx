@@ -1,23 +1,25 @@
 "use client"
 
+import { Badge } from "@/components/ui/badge"
 import { useState } from "react"
 import {
   ToggleGroup,
   ToggleGroupItem,
 } from "@/components/ui/toggle-group"
+import { Listing } from "@/types/market.types"
 
 export function ListingImages({
-  images,
-  title,
+	listing
 }: {
-  images: string[]
-  title: string
+	listing: Listing
 }) {
-  const [selectedImage, setSelectedImage] = useState(images[0])
+	const { image: images, title } = listing;
+  const [selectedImage, setSelectedImage] = useState(images[0]);
 
   return (
     <div className="w-full lg:w-[60%]">
-      <div className="aspect-4/3 w-full overflow-hidden rounded-sm">
+      <div className="relative aspect-4/3 w-full overflow-hidden rounded-sm">
+				<Badge className="absolute top-4 left-4">{listing.condition}</Badge>
         <img
           src={selectedImage}
           alt={title}

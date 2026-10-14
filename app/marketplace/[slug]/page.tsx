@@ -55,8 +55,7 @@ export default async function ListingDetailsPage({ params } : Props){
 			<Breadcrumbs breadcrumbs={crumbs}/>
 			<section className="mt-4 product-details flex gap-4">
 				<ListingImages 
-					images={listItem.image}
-					title={listItem.title}
+					listing={listItem}
 				/>
 				<ListingDetailCard listing={listItem} />
 			</section>

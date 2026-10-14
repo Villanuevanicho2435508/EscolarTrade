@@ -1,4 +1,4 @@
-import { Heart, MessageSquareText } from "lucide-react";
+import { Heart, MessageSquareText, Flag } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,7 +31,9 @@ export function ListingDetailCard({ listing } : { listing: Listing }){
 				<CardHeader>
 					<div className="font-medium flex justify-between">
 						<p className="uppercase text-muted-foreground text-xs">{listing.category}</p>
-						<p className="uppercase text-muted-foreground text-xs">2H Ago</p>
+						<Button variant="ghost" size="icon-sm">
+							<Flag className="text-muted-foreground"/>
+						</Button>
 					</div>
 					<CardTitle className="text-4xl font-extrabold">{listing.title}</CardTitle>
 					<div className="items-center flex justify-between">
