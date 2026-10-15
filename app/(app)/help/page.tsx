@@ -8,6 +8,6 @@
 
 export default function HelpPage(){
 	return(
-		<main></main>	
+		<main>Hello world</main>	
 	);
 }
