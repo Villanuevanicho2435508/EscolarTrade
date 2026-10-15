@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { GraduationCap } from "lucide-react";
+import { Logo } from "../Logo";
 
 const LandingLinks = [
 	{
@@ -34,19 +34,7 @@ export function LandingNavbar(){
 				border
 				'
 			>
-				<Link 
-					className='flex gap-2 p-0 leading-4 h-full'
-					href="/">
-					<GraduationCap size={32} className='h-full aspect-square'/>
-					<span>
-						<p className='font-semibold text-sm'>
-							EscolarTrade
-						</p>
-						<p className='text-xs text-muted-foreground'>
-							CEU Malolos Campus	
-						</p>
-					</span>
-				</Link>
+				<Logo />
 
 				<div className="hidden links gap-4 lg:flex text-sm text-muted-foreground">
 					{
