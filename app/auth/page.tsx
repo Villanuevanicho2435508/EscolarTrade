@@ -40,7 +40,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 
 export default function AuthPage(){
 	return(
-		<main className='w-full gap-8 flex flex-col items-center py-4 px-8'>
+		<main className='w-full gap-8 flex flex-col items-center py-4 px-4 lg:px-8'>
 			<Logo />
 			<Card className="max-w-lg w-full">
 				<CardHeader>
@@ -129,7 +129,7 @@ export default function AuthPage(){
 												/>
 												<FieldError></FieldError>
 											</Field>
-											<div className="gap-2 grid grid-cols-2 grid-rows-2">
+											<div className="gap-2 grid sm:grid-cols-2 grid-rows-2">
 												<Field>
 													<FieldLabel htmlFor="program" className="flex gap-0">
 														Degree Program<sup className="text-red-500">*</sup>
