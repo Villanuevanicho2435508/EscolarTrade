@@ -7,8 +7,6 @@ interface Props{
 	params: Promise<{ slug: string }>
 }
 
-const seller = true;
-
 import type { Listing } from "@/types/market.types"
 
 const listItem: Listing = {

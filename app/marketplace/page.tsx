@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
+
 import Link from "next/link"
 import { ArrowRight, CirclePlus } from "lucide-react"
-import { Footer } from "@/components/Landing/Footer"
 import { MarketplaceBrowser } from "@/components/Marketplace/MarketplaceBrowser"
 import { ListingCard } from "@/components/Marketplace/ListingCard"
 import { MARKETPLACE_LISTINGS, RECOMMENDED_LISTINGS } from "@/data/sample-listings"
