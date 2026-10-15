@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import { MarketplaceHeader } from "@/components/Marketplace/MarketPlaceHeader"
 import { Footer } from "@/components/Landing/Footer"
 import { FooterLinkType } from "@/components/Landing/Footer"
@@ -38,13 +39,15 @@ export default function RootLayout({
 }>) {
   return (
 		<>
-			<MarketplaceHeader
-				user={{
-					initials: "BR",
-					name: "Bea R.",
-					subtitle: "BS Nursing 3rd Yr",
-				}}
-			/>
+			<Suspense fallback={null}>
+				<MarketplaceHeader
+					user={{
+						initials: "BR",
+						name: "Bea R.",
+						subtitle: "BS Nursing 3rd Yr",
+					}}
+				/>
+			</Suspense>
 			{children}
 			<Footer links={FOOTER_LINKS}/>
 		</>
